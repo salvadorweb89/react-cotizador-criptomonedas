@@ -9,5 +9,5 @@ services:
       - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
     volumes:
       - .:/react-cotizador
-    #command: sh -c "cd react-cotizador && npm install && npm run dev"
-    command: sh -c "tail -F something"
+    command: sh -c "cd cotizador && npm install && npm run dev"
+    #command: sh -c "tail -F something"
