@@ -26,6 +26,10 @@ const Formulario = () => {
 
   const [criptos, setCriptos] = useState([]);
   const [ moneda, SelectMonedas ] = useSelectMonedas('Elige tu moneda', monedas);
+  
+  const [ criptomoneda, SelectCriptoMonedas ] = useSelectMonedas('Elige tu Criptomoneda', criptos);
+
+
   SelectMonedas();
 
   useEffect(() => {
@@ -36,7 +40,7 @@ const Formulario = () => {
       const result = await response.json();
 
       const arrayCriptos = result.Data.map(cripto => {
-        return { id: cripto.CoinInfo.Name, name: cripto.CoinInfo.FullName }
+        return { id: cripto.CoinInfo.Name, nombre: cripto.CoinInfo.FullName }
       });
 
       setCriptos(arrayCriptos);
@@ -47,6 +51,8 @@ const Formulario = () => {
   return (
     <form>
         <SelectMonedas />
+        <SelectCriptoMonedas />
+
         <InputSubmit 
           type='submit' 
           value='Cotizar' 
