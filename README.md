@@ -21,3 +21,5 @@ A simple React project that implements a Crypto Currency Trader.
 ### Preview
 
 A live demo of this project is available here https://cotizador-criptomonedas-salvadorweb89.netlify.app/
+
+![image](https://github.com/salvadorweb89/react-cotizador-criptomonedas/assets/9569430/617c3500-e771-4735-8b15-b0f118f449f1)
