@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Formulario from './components/Formulario';
+import Resultado from './components/Resultado';
 import styled from '@emotion/styled';
 import ImagenCripto from './img/imagen-criptos.png';
 
@@ -73,6 +74,8 @@ function App() {
         <Formulario 
           setMonedas={setMonedas}
         />
+
+        {resultado.PRICE && <Resultado resultado={resultado} />}
       </div>
     </Contenedor>
   )
